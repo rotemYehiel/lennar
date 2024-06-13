@@ -19,6 +19,10 @@ export const ListContainer = styled.div`
 export const ListItem = styled.li`
   padding: 10px 0;
   border-bottom: 1px solid #ccc;
+
+  &:last-child {
+    border-bottom: none;
+  }
 `;
 
 export const ListItemText = styled.div`
