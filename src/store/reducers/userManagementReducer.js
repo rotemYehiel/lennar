@@ -3,6 +3,7 @@ import {
   GET_USERS,
   GET_USERS_FAILURE,
   GET_USERS_SUCCESS,
+  REMOVE_USER,
 } from "../../constants/actionType";
 import { LIST } from "../../constants/keys";
 
@@ -37,6 +38,14 @@ const userManagementReducer = (state = initialState, action) => {
       return {
         ...state,
         usersDisplay: action.payload,
+      };
+    case REMOVE_USER:
+      const newUsers = state.users.filter(
+        (_, index) => index !== action.payload
+      );
+      return {
+        ...state,
+        users: newUsers,
       };
 
     default:

@@ -17,6 +17,9 @@ export const ListContainer = styled.div`
 `;
 
 export const ListItem = styled.li`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 10px 0;
   border-bottom: 1px solid #ccc;
 
@@ -27,7 +30,8 @@ export const ListItem = styled.li`
 
 export const ListItemText = styled.div`
   display: flex;
-  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.25rem;
 `;
 
 export const UserName = styled.p`

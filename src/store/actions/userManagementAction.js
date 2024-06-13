@@ -3,6 +3,7 @@ import {
   GET_USERS,
   GET_USERS_FAILURE,
   GET_USERS_SUCCESS,
+  REMOVE_USER,
 } from "../../constants/actionType";
 import { USERS } from "../../constants/users";
 
@@ -21,5 +22,11 @@ export const getUsers = () => {
 export const changeUsersDisplay = (display) => {
   return async (dispatch) => {
     dispatch({ type: CHANGE_USERS_DISPLAY, payload: display });
+  };
+};
+
+export const removeUser = (idx) => {
+  return async (dispatch) => {
+    dispatch({ type: REMOVE_USER, payload: idx });
   };
 };
